@@ -84,11 +84,14 @@ The `fraud_scoring_engine.py` employs a cumulative scoring system where points a
 
 ## Dashboard Visualization
 
-The Tableau dashboard provides a real-time view of the fraud landscape:
-* **KPI Tiles:** Total reports, cumulative dollar loss, and average loss per case.
-* **Trend Analysis:** Monthly volume of fraud reports vs. total financial loss.
-* **Geographic Heatmap:** Distribution of fraud incidents across Canadian provinces.
-* **Categorical Breakdown:** Visualization of fraud types by total loss.
+The Tableau dashboard (`Canadian Fraud Analysis Dashboard.png`) provides a real-time view of the fraud landscape:
+
+* **Risk Level Distribution:** A circle graph visualizing the breakdown of transactions categorized by the scoring engine into Low, Medium, and High risk tiers.
+* **Trend Analysis:** A Monthly Fraud Trend chart comparing the volume of reports against the total financial loss to identify seasonal spikes and patterns.
+* **Categorical Breakdown:** A visualization of fraud types and solicitation methods, highlighting which vectors—such as direct calls or social media—yield the highest financial impact.
+* **KPI Tiles:** High-level metrics showing Total Reports, Cumulative Dollar Loss, and Average Loss per case for immediate executive review.
+
+> **Development Status:** This dashboard is currently being improved to include real-time data streaming capabilities.
 
 ---
 
