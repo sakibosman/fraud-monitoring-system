@@ -1,12 +1,12 @@
 # Fraud Monitoring System
 
-This project demonstrates a comprehensive fraud monitoring pipeline designed to identify, score, and visualize suspicious financial activities. The system provides an end-to-end solution for detecting fraud in high-volume transaction environments.
+A comprehensive fraud monitoring pipeline designed to identify, score, and visualize suspicious financial activities. The system provides an end-to-end solution for detecting fraud in high-volume transaction environments.
 
 ---
 
 ## Business Problem
 
-Financial institutions face billions in losses annually due to increasingly sophisticated fraudulent schemes. The challenge lies in distinguishing legitimate transactions from high-risk activities in real-time without disrupting the customer experience. This project addresses the need for a scalable monitoring system that can flag suspicious patterns—such as investment scams and identity theft—and categorize them into actionable risk levels (Approve, Escalate, or Block).
+Financial institutions face billions in losses annually due to increasingly sophisticated fraudulent schemes. The challenge lies in distinguishing legitimate transactions from high-risk activities in real-time without disrupting the customer experience. This project addresses the need for a scalable monitoring system that can flag suspicious trends such as investment scams and identity theft. The scoring engine then categorizes them into actionable risk levels (Approve, Escalate, or Block).
 
 ---
 
@@ -14,14 +14,14 @@ Financial institutions face billions in losses annually due to increasingly soph
 
 > **Note on Data Volume:** The original dataset contains over 350,000 records. To optimize for repository performance and storage, `data/fraud_data.csv` and `data/fraud_flagged.csv` have been reduced to the first **10,000 rows**. However, the insights provided in the SQL analysis and the dashboard reflect findings from the full-scale dataset.
 
-* **Original Source:** [Open Government Portal - Canadian Anti-Fraud Centre Reporting Data](https://open.canada.ca/data/en/dataset/6a09c998-cddb-4a22-beff-4dca67ab892f/resource/43c67af5-e598-4a9b-a484-fe1cb5d775b5)
+* **Original Dataset:** [Canadian Anti-Fraud Centre Reporting Data](https://open.canada.ca/data/en/dataset/6a09c998-cddb-4a22-beff-4dca67ab892f/resource/43c67af5-e598-4a9b-a484-fe1cb5d775b5)
 
 ---
 
 ## Project Objectives
 
 * **Data Integrity:** Standardize and clean raw transaction logs to ensure high-quality analysis.
-* **Risk Identification:** Implement a multi-factor rule-based scoring engine to quantify transaction risk.
+* **Risk Identification:** Implement a multi-factor rule-based scoring engine to quantify transaction risk. Backtesting historical data to identify effective scoring rules.
 * **Operational Intelligence:** Provide data-driven insights into fraud trends across demographics and solicitation methods.
 * **Executive Visualization:** Build an automated dashboard to track Key Performance Indicators (KPIs) such as total dollar loss and high-risk clusters.
 
@@ -33,7 +33,7 @@ The system follows a structured ETL and analysis workflow:
 1.  **Ingestion:** Raw transaction data is stored in the `data/` directory.
 2.  **Processing (SQL):** Aggregation and high-level trend analysis are performed to identify macro-patterns.
 3.  **Refinement (Python):** Data is cleaned and preprocessed for the scoring engine.
-4.  **Scoring:** A rule-based logic engine assigns risk scores to every record.
+4.  **Scoring:** A rule-based logic engine assigns risk scores to every record. 
 5.  **Visualization:** Finalized datasets are exported to Tableau for reporting.
 
 ---
